@@ -1,0 +1,163 @@
+.search{
+	width:300px;
+}
+
+.product-image{
+	width:40px;
+	height:40px;
+	object-fit: cover;
+	margin-right:5px; 
+}
+
+.table{
+	td{
+		vertical-align: middle !important;
+	} 
+}  
+
+// Кнопка отображения настройки дополнительных полей
+
+.productFieldsGear{
+	color:#000000;
+	margin-right:15px;	
+}
+
+// Поле описание. Ставлю фиксированную ширину. 
+
+.product-description-title{
+	width: 270px;
+}
+
+.description-content{ 
+	height: 20px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	margin:0px;
+	width: 270px; 
+}
+
+.product-description i{
+	position:relative;
+	display:none;
+	float:right; 
+}
+
+.product-description:hover i{
+	display:block;
+}
+
+.collapsedButton{
+	position:absolute;
+	width:270px;
+}
+
+.collapsedButton:hover{
+	cursor:pointer; 
+}
+
+.collapsedButton .fa-caret-up{
+	top:-15px;
+}
+
+// Картинка товара в списке товаров
+
+.product-image:hover{
+	cursor:pointer;
+	opacity:0.8;
+} 
+
+// File manager
+
+.product-file{
+	width:100%;
+	border:1px solid #ccc;
+
+	&:hover{
+		cursor:pointer;
+		opacity:0.6;
+	}
+}
+
+#file-manager { 
+	& > div {
+		display:block;
+	}
+	.modal-overflow-scroll{ 
+		max-height: 600px;
+		overflow-y: auto;
+		overflow-x: hidden;
+	}
+}
+
+.modal-title{
+	float:left;
+}
+
+.close-modal:hover{
+	cursor:pointer;
+}
+
+.modal-dialog{
+	width: 500px;
+}
+
+// Список в меню
+
+.dropdown-menu{
+	left:-68px;
+}
+
+// Чекбоксы : отображаем поля
+
+.enableFieldCheckboxBlock{
+	width: 280px;
+	height: auto;
+	max-height:300px;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	position: absolute;
+	background: #ffffff;
+	border: 1px solid #c2bebe;
+	padding: 10px;
+	margin-top:15px;
+	margin-left:15px;
+}
+.enableFieldCheckboxSpan{
+	margin-right:15px;
+}
+
+.productSelect{
+	display:none;
+}
+
+.productTable tr:hover {
+	.productSelect{
+		display:block;
+	}
+}
+
+.productSelectActive{
+	display:block !important;
+} 
+
+.selectAll{
+	display:none; 
+	float:left;
+	-ms-transform: scale(0.8); /* IE */
+	-moz-transform: scale(0.8); /* FF */
+	-webkit-transform: scale(0.8); /* Safari and Chrome */
+	-o-transform: scale(0.8); /* Opera */
+	margin-right: 30px;
+}
+
+th:hover .selectAll{
+	display:block;
+}
+
+.selectAllActive{
+	display:block;
+
+}
+
+

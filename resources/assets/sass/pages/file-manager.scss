@@ -1,0 +1,143 @@
+.box-body {
+  min-height: 150px;
+}
+
+.disabled {
+  opacity: .65;
+  pointer-events: none;
+}
+
+.btn-group-actions {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.info-box {
+  .info-box-content {
+    padding: 5px 20px 5px 10px;
+  }
+  .box-tools {
+    position: absolute;
+    right: 15px;
+    top: 0;
+  }
+}
+
+.box {
+  .box-teal {
+    border-top-color: #39CCCC;
+  }
+  .box-purple {
+    border-top-color: #605ca8;
+  }
+  .box-red {
+    border-top-color: #f56954;
+  }
+  .box-yellow {
+    border-top-color: #f39c12;
+  }
+  .box-aqua {
+    border-top-color: #00c0ef;
+  }
+  .box-green {
+    border-top-color: #00a65a;
+  }
+
+  &[data-type="image"] .box-body {
+    padding: 0;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .box-title {
+    white-space: nowrap;
+    overflow: hidden;
+    display: block;
+    text-overflow: ellipsis;
+    margin-right: 15px;
+  }
+}
+
+#files {
+  display: none;
+}
+
+#right-click-menu {
+  background: #FFFFFF;
+  border-radius: 3px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border: 1px solid #d2d6de;
+  display: block;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  width: 250px;
+  z-index: 999999;
+  outline: none;
+
+  li {
+    border-bottom: 1px solid #f4f4f4;
+    margin: 0;
+    padding: 5px 10px;
+    cursor: default;
+
+    i {
+      margin-right: 5px;
+    }
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    &:hover {
+      background: #d2d6de;
+    }
+  }
+}
+
+#cropper {
+  display: block;
+  overflow-y: auto;
+
+  .modal-dialog {
+    width: 90%;
+    // height: 90%;
+    max-width: 1600px;
+    margin-bottom: 50px;
+    margin: 10px auto;
+    
+    .modal-header {
+      h4.modal-title {
+        display: inline-block;
+        white-space: nowrap;
+      }
+    }
+  }
+
+  .modal-body {
+    height: 630px;
+    overflow: hidden;
+    padding: 0;
+
+    .cropper-name {
+      margin-right: 15px;
+      margin-left: 15px;
+    }
+    .cropper-img {
+      height: 560px;
+      margin-top: 10px;
+
+      img {
+        max-width: 100%; /* This rule is very important, please do not ignore this! */
+      }
+    }
+  }
+
+  .cropper-round .cropper-view-box,
+  .cropper-round .cropper-face {
+    border-radius: 50%;
+  }
+}

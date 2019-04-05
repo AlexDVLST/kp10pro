@@ -1,0 +1,24 @@
+# Ignore everything:
+*
+
+# Except for the themes directories:
+!resource/
+!resource/*
+!resource/templates/
+!resource/templates/base/
+!resource/templates/base/cover/
+!resource/templates/base/cover/*
+!resource/templates/base/employee/
+!resource/templates/base/employee/*
+!resource/templates/base/gallery/
+!resource/templates/base/gallery/*
+!resource/templates/base/logo/
+!resource/templates/base/logo/*
+!resource/templates/base/product/
+!resource/templates/base/product/*
+
+!offers/
+!offers/base
+!offers/base/*
+
+!.gitignore

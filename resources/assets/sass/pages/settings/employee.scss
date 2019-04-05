@@ -1,0 +1,14 @@
+#avatar:hover {
+    cursor: pointer;
+    opacity: 0.6;
+}
+
+#file-manager .modal-overflow-scroll{
+    max-height: 600px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.suggestions-wrapper{
+    display: block !important;
+}

@@ -1,0 +1,38 @@
+.product-file{
+	width:100%;
+	border:1px solid #ccc;
+
+	&:hover{
+		cursor:pointer;
+		opacity:0.6;
+	}
+}
+
+#file-manager { 
+	& > div {
+		display:block;
+	}
+	.modal-overflow-scroll{ 
+		max-height: 600px;
+		overflow-y: auto;
+		overflow-x: hidden;
+	}
+}
+
+.modal-title{
+	float:left;
+}
+
+.close-modal:hover{
+	cursor:pointer;
+}
+
+.modal-dialog{
+	width: 90%;
+} 
+// Удаление дополнительного поля
+.remove-customField:hover{
+	cursor:pointer;
+	opacity:0.8;
+} 
+

@@ -1,0 +1,12 @@
+.signature {
+  max-width: 200px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.table tbody td:last-child {
+  width: 1%;
+  white-space: nowrap;
+}
+

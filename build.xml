@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="name-of-project" default="quick-build">
+    <property name="projectdir" location="/home/www/kp10.ru"/>
+    <target name="quick-build" depends="prepare,lint,copy,artisan-migrate,composer-dump-autoload,artisan-db-seed" description="Performs a lint check"/>
+    <target name="clean" unless="clean.done" description="Cleanup build artifacts">
+        <delete dir="${basedir}/build/src"/>
+        <property name="clean.done" value="true"/>
+    </target>
+    <target name="prepare" unless="prepare.done" depends="clean" description="Prepare for build">
+        <mkdir dir="${basedir}/build/src"/>
+        <property name="prepare.done" value="true"/>
+    </target>
+    <target name="lint" unless="lint.done" description="Perform syntax check of sourcecode files">
+        <apply executable="php" taskname="lint">
+            <arg value="-l" />
+            <fileset dir="${basedir}/app">
+                <include name="**/*.php" />
+                <modified />
+            </fileset>
+            <fileset dir="${basedir}/routes">
+                <include name="**/*.php" />
+                <modified />
+            </fileset>
+        </apply>
+        <property name="lint.done" value="true"/>
+    </target>
+    <target name="copy" depends="lint" unless="copy.done" description="Copy sourcecode files to project dir">
+        <copy todir="/home/www/kp10.ru/app">
+            <fileset dir="${basedir}/app">
+            </fileset>
+        </copy>
+        <copy todir="/home/www/kp10.ru/database">
+            <fileset dir="${basedir}/database">
+            </fileset>
+        </copy>
+        <copy todir="/home/www/kp10.ru/public">
+            <fileset dir="${basedir}/public">
+            </fileset>
+        </copy>
+        <copy todir="/home/www/kp10.ru/resources">
+            <fileset dir="${basedir}/resources">
+                <exclude name="**/assets/**" />
+            </fileset>
+        </copy>
+        <copy todir="/home/www/kp10.ru/routes">
+            <fileset dir="${basedir}/routes">
+            </fileset>
+        </copy>
+        <copy todir="/home/www/kp10.ru/storage/app/public/resource">
+            <fileset dir="${basedir}/storage/app/public/resource">
+            </fileset>
+        </copy>
+        <copy todir="/home/www/kp10.ru/storage/app/public/offers/base">
+            <fileset dir="${basedir}/storage/app/public/offers/base">
+            </fileset>
+        </copy>
+        <copy todir="/home/www/kp10.ru/config">
+            <fileset dir="${basedir}/config">
+            </fileset>
+        </copy>
+        <property name="copy.done" value="true"/>
+    </target>
+    <target name="artisan-migrate" depends="copy" description="Artisan migrate">
+        <exec executable="php" dir="${projectdir}">
+            <arg value="artisan"/>
+            <arg value="migrate"/>
+        </exec>
+    </target>
+    <target name="composer-dump-autoload" depends="artisan-migrate" description="Regenerate Composer's autoloader">
+        <exec executable="composer" dir="${projectdir}">
+            <arg value="dump-autoload"/>
+        </exec>
+    </target>
+    <target name="artisan-db-seed" depends="composer-dump-autoload" description="Artisan db:seed">
+        <exec executable="php" dir="${projectdir}">
+            <arg value="artisan"/>
+            <arg value="db:seed"/>
+        </exec>
+    </target>
+    <target name="artisan-cache-clear" depends="artisan-db-seed" description="Artisan cache:clear">
+        <exec executable="php" dir="${projectdir}">
+            <arg value="artisan"/>
+            <arg value="cache:clear"/>
+        </exec>
+    </target>
+</project>

@@ -1,0 +1,20 @@
+#notification-register-bonus-modal {
+    .modal-header {
+        background-color: #00a65a;
+        text-align: center;
+        h1{
+            color: #ffffff;
+            margin: 30px 0;
+        }
+
+        img {
+            margin: 30px 0;
+            width: 100px;
+        }
+    }
+    @media (min-width: 768px){
+        .modal-sm {
+            width: 400px;
+        }
+    }
+}

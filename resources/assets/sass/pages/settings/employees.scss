@@ -1,0 +1,16 @@
+.signature{
+    max-width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis; 
+    white-space: nowrap;
+}
+
+.table{ 
+    tbody{
+        //Set minimal with
+        td:last-child{
+            width: 1%;
+            white-space: nowrap;
+        }
+    }
+}

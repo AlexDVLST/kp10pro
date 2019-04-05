@@ -1,0 +1,114 @@
+@import "variables";
+
+@font-face {
+  font-family: '#{$icomoon-font-family}';
+  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?n75lh6');
+  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?n75lh6#iefix') format('embedded-opentype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?n75lh6') format('truetype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?n75lh6') format('woff'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?n75lh6##{$icomoon-font-family}') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.icon {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: '#{$icomoon-font-family}' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-chf {
+  &:before {
+    content: $icon-chf; 
+  }
+}
+.icon-byn {
+  &:before {
+    content: $icon-byn; 
+  }
+}
+.icon-uah {
+  &:before {
+    content: $icon-uah; 
+  }
+}
+.icon-hryvnia {
+  &:before {
+    content: $icon-hryvnia; 
+  }
+}
+.icon-kzt {
+  &:before {
+    content: $icon-kzt; 
+  }
+}
+.icon-tenge {
+  &:before {
+    content: $icon-tenge; 
+  }
+}
+.icon-cny {
+  &:before {
+    content: $icon-cny; 
+  }
+}
+.icon-jpy {
+  &:before {
+    content: $icon-jpy; 
+  }
+}
+.icon-rmb {
+  &:before {
+    content: $icon-rmb; 
+  }
+}
+.icon-yen {
+  &:before {
+    content: $icon-yen; 
+  }
+}
+.icon-gbp {
+  &:before {
+    content: $icon-gbp; 
+  }
+}
+.icon-dollar {
+  &:before {
+    content: $icon-dollar; 
+  }
+}
+.icon-usd {
+  &:before {
+    content: $icon-usd; 
+  }
+}
+.icon-rouble {
+  &:before {
+    content: $icon-rouble; 
+  }
+}
+.icon-rub {
+  &:before {
+    content: $icon-rub; 
+  }
+}
+.icon-ruble {
+  &:before {
+    content: $icon-ruble; 
+  }
+}
+.icon-eur {
+  &:before {
+    content: $icon-eur; 
+  }
+}
+

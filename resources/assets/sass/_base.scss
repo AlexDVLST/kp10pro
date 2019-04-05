@@ -1,0 +1,70 @@
+// .disabled{
+//     pointer-events: none;
+//     background-color: #eee;
+//     opacity: 1;
+//     cursor: not-allowed;
+// }
+
+[v-cloak] {
+    display: none;
+}
+// Functional panel showing on mouseover
+table {
+	td { position: relative; }
+	.functional-panel { 
+		position: absolute;
+		width: 240px;
+		height: 100%;
+		right: 0;
+		top: 0;
+		background-color: #f4f4f4;
+		padding-right: 0.5em;
+		text-align: right;
+		
+		&>div {
+			top: 50%;
+			transform: translateY(-50%);    
+		}
+	}
+}
+
+.modal {
+	overflow-y: auto;
+}
+// Bootstrap fix
+// .fade {
+// 	opacity: 0;
+// 	-webkit-transition: opacity 0.15s linear;
+// 	   -moz-transition: opacity 0.15s linear;
+// 		-ms-transition: opacity 0.15s linear;
+// 		 -o-transition: opacity 0.15s linear;
+// 			transition: opacity 0.15s linear;
+//   }
+.disabled {
+	opacity: .65;
+	pointer-events: none;
+}
+
+.modal-disabled {
+	&::before{
+		content: 'Пожалуйста подождите...';
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		margin-left: -5em;
+		margin-top: -1em;
+		color: #fff;
+		z-index: 6;
+	}
+	&::after{
+		content: ' ';
+		background: #203d49;
+		position: absolute;
+		left: 0;
+		top: 0;
+		opacity: 0.7;
+		width: 100%;
+		height: 100%;
+		z-index: 5;
+	}
+}

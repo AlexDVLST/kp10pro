@@ -1,0 +1,17 @@
+.tour {
+	padding: 0;
+	box-shadow: none;
+	border: 0;
+	background-color: transparent;
+	border-radius: inherit;
+
+	.popover-title {
+		background-color: initial;
+		border-bottom: none;
+		padding: initial;
+	}
+
+	.box{
+		margin: 0;
+	}
+}

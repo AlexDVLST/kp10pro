@@ -1,0 +1,12 @@
+.suggestions-wrapper{
+    display: block !important;
+}
+
+.select2 .select2-selection--multiple a{
+    color: #ffffff;
+    text-decoration: underline;
+
+    &:hover, &:active, &:focus{
+        color: #ffffff;
+    }
+}

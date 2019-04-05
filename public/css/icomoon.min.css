@@ -1,0 +1,92 @@
+@charset "UTF-8";
+
+@font-face {
+  font-family: "icomoon";
+  src: url(/fonts/icomoon.eot?223e1ae94e2866a21e434bee280e8812);
+  src: url(/fonts/icomoon.eot?223e1ae94e2866a21e434bee280e8812) format("embedded-opentype"), url(/fonts/icomoon.ttf?9b60a7ff0f97e8562d3c5f75a6017bc7) format("truetype"), url(/fonts/icomoon.woff?c111c373dda64bed1ea036a305c009c9) format("woff"), url(/fonts/icomoon.svg?2d42aba869afb3cd06a0dd3062b81b8e) format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.icon {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "icomoon" !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-chf:before {
+  content: "\E908";
+}
+
+.icon-byn:before {
+  content: "\E907";
+}
+
+.icon-uah:before {
+  content: "\E901";
+}
+
+.icon-hryvnia:before {
+  content: "\E901";
+}
+
+.icon-kzt:before {
+  content: "\E900";
+}
+
+.icon-tenge:before {
+  content: "\E900";
+}
+
+.icon-cny:before {
+  content: "\E902";
+}
+
+.icon-jpy:before {
+  content: "\E902";
+}
+
+.icon-rmb:before {
+  content: "\E902";
+}
+
+.icon-yen:before {
+  content: "\E902";
+}
+
+.icon-gbp:before {
+  content: "\E903";
+}
+
+.icon-dollar:before {
+  content: "\E904";
+}
+
+.icon-usd:before {
+  content: "\E904";
+}
+
+.icon-rouble:before {
+  content: "\E905";
+}
+
+.icon-rub:before {
+  content: "\E905";
+}
+
+.icon-ruble:before {
+  content: "\E905";
+}
+
+.icon-eur:before {
+  content: "\E906";
+}
+

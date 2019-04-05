@@ -1,0 +1,19 @@
+
+// Fonts
+// @import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic");
+
+//Font awesome
+@import "bower_components/font-awesome/scss/font-awesome.scss";
+
+//Icomonn font currencies 
+@import "icomoon/style";
+
+// Variables
+@import "variables";
+
+// Bootstrap
+@import "~bootstrap-sass/assets/stylesheets/bootstrap";
+
+//Global styles for all
+@import "base"
